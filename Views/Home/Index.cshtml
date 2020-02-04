@@ -1,0 +1,12 @@
+﻿@model IEnumerable<HW_Web_6._1.Models.Film>
+@{
+    ViewBag.Title = "All films";
+}
+<a asp-action="Create">Adding film</a>
+<table class="table">
+    <tr><td>Title</td><td>Realise Date</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Title</td><td>@item.RealiseDate</td></tr>
+    }
+</table>
